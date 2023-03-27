@@ -1,8 +1,20 @@
 import { Ui } from '@nextorg/ui';
+import { api } from '@nextorg/api';
 
-export function Index() {
+export async function getServerSideProps() {
+  const data = await api();
+  return {
+    props: {
+      message: data.message,
+    },
+  };
+}
+
+export function Index(props: { message: string }) {
   return (
-    <Ui />
+    <Ui>
+      Hello {props.message}
+    </Ui>
   );
 }
 
