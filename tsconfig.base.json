@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nextorg/api": ["libs/api/src/index.ts"],
       "@nextorg/ui": ["libs/ui/src/index.ts"]
     }
   },
